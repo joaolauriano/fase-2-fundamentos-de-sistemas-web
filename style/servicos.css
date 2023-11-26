@@ -1,0 +1,47 @@
+.container_servicos h1 {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+.container_servicos p {
+    color: #1E1E1E;
+    text-align: center;
+    margin: 0 10% 0 10%;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 33px;
+}
+
+.nossos_servicos {
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.img_servicos {
+    height: 30vh;
+    width: 30vh;
+    padding-bottom: 25px;
+}
+
+.nossos_servicos li {
+    display:inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 10vh 1vh;
+    box-sizing: border-box;
+    border: 2px solid #D0D1D3;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+.nossos_servicos h2 {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1E1E1E;
+}

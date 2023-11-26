@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop João Ribeiro</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/nav.css">
+    <link rel="stylesheet" href="./style/formulario.css">
+    <link rel="stylesheet" href="./style_cadastro/bem_vindo_cadastro.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <ul class = "menu">
+                    <li class = "item_menu">
+                        <a href="./index.html">Home</a>
+                    </li>
+
+                    <li class = "item_menu">
+                        <a href="./index.html#carrossel_produtos_box">Rações</a>
+                    </li>
+
+                    <li class = "item_menu">
+                        <a href="./index.html#container_servicos">Serviços</a>
+                    </li>
+
+                    <li class = "item_menu">
+                        <a href="./index.html#sobre__nos">Sobre Nós</a>
+                    </li>
+
+                    <li class = "item_menu">
+                        <a href="./login.html">Entrar / Cadastre-se</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="texto_bem_vindo_cadastro">
+        <h2>Bem vindo!</h2>
+        <p>Crie uma nova conta!</p>
+    </div>
+
+
+    <form>
+        <fieldset class="container_formulario">
+
+            <label>Nome</label>
+            <input type="text" id="nome" class="input-padrao" placeholder="Nome completo" required>
+            
+            <label>Email</label>
+            <input type="email" id="email" class="input-padrao" placeholder="Digite seu email" required>
+
+            <label>Senha</label>
+            <input type="text" id="senha" class="input-padrao" pattern="[A-Za-z0-9]{8,}" placeholder="Senha" required>
+
+            <label>Confime a senha</label>
+            <input type="text" id="confirma_senha" class="input-padrao" pattern="[A-Za-z0-9]{8,}" placeholder="Confirme a senha" required>
+
+            <fieldset>
+                <label>Deseja receber ações promocionais em seu email?</label> <br>
+                <input type="radio" name="promocoes" class="input-padrao" id="radio_sim" required> Sim <br>
+                <input type="radio" name="promocoes" class="input-padrao" id="radio_nao" required> Não
+            </fieldset>
+
+            <fieldset>
+                <label>Qual destes tipos de pet você tem?</label> <br>
+                <input type="checkbox" id="cachorro" class="input-padrao" required> Cachorro <br>
+                <input type="checkbox" id="gato" class="input-padrao" required> Gato <br>
+                <input type="checkbox" id="ave" class="input-padrao" required> Ave <br>
+                <input type="checkbox" id="outro" class="input-padrao" required> Outro <br>
+            </fieldset>
+
+            <label>Quantos pets você tem?</label>
+            <input type="number" id="numeto_pets" class="input-padrao" required>
+
+            <input type="submit" value="Continuar" class="enviar">
+        </fieldset>
+    </form>
+
+</body>
+</html>

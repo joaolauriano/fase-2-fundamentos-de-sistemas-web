@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop João Ribeiro</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/nav.css">
+    <link rel="stylesheet" href="./style/banner_principal.css">
+    <link rel="stylesheet" href="./style/carrossel_produtos.css">
+    <link rel="stylesheet" href="./style/servicos.css">
+    <link rel="stylesheet" href="./style/sobre_nos.css">
+    <link rel="stylesheet" href="./style/formulario.css">
+    <link rel="stylesheet" href="./style/footer.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <ul class = "menu">
+                    <li class = "item_menu">
+                        <a href="#top">Home</a>
+                    </li>
+
+                    <li class = "item_menu">
+                        <a href="#carrossel_produtos_box">Rações</a>
+                    </li>
+
+                    <li class = "item_menu">
+                        <a href="#container_servicos">Serviços</a>
+                    </li>
+
+                    <li class = "item_menu">
+                        <a href="sobre__nos">Sobre Nós</a>
+                    </li>
+
+                    <li class = "item_menu">
+                        <a href="./login.html">Entrar / Cadastre-se</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="banner_principal" id="banner_principal"> <!-- Div de criação do banner principal do site -->
+        <div class="img_ban" id="img_ban3">
+            
+        </div>
+        <div class="img_ban" id="img_ban2">
+            
+        </div>
+        <div class="img_ban" id="img_ban1">
+            
+        </div>
+
+    </div>
+
+    <script> /*Script JavaScript da rotação do banner*/
+        var bannerStatus = 1;
+        var bannerTimer = 4000;
+
+        window.onload = function () {
+            bannerLoop();
+        }
+
+        var começarLoopBanner = setInterval(function() {
+            bannerLoop();
+        }, bannerTimer);
+
+        document.getElementById("banner_principal").onmouseenter = function() {
+            clearInterval(começarLoopBanner);
+        }
+
+        document.getElementById("banner_principal").onmouseleave = function() {
+            começarLoopBanner = setInterval(function() {
+                bannerLoop();
+            }, bannerTimer);
+        }
+
+        function bannerLoop() {
+            if (bannerStatus === 1) {
+                document.getElementById("img_ban2").style.opacity = "0";
+
+                setTimeout(function() {
+                    document.getElementById("img_ban1").style.right = "0px";
+                    document.getElementById("img_ban1").style.zIndex = "1000";
+                    document.getElementById("img_ban2").style.right = "-1200px";
+                    document.getElementById("img_ban2").style.zIndex = "1500";
+                    document.getElementById("img_ban3").style.right = "1200px";
+                    document.getElementById("img_ban3").style.zIndex = "500";
+                }, 500);
+                
+                setTimeout(function() {
+                    document.getElementById("img_ban2").style.opacity = "1";
+                }, 1000);
+                bannerStatus = 2;
+            }
+
+            else if (bannerStatus === 2) {
+                document.getElementById("img_ban3").style.opacity = "0";
+
+                setTimeout(function() {
+                    document.getElementById("img_ban2").style.right = "0px";
+                    document.getElementById("img_ban2").style.zIndex = "1000";
+                    document.getElementById("img_ban3").style.right = "-1200px";
+                    document.getElementById("img_ban3").style.zIndex = "1500";
+                    document.getElementById("img_ban1").style.right = "1200px";
+                    document.getElementById("img_ban1").style.zIndex = "500";
+                }, 500);
+                
+                setTimeout(function() {
+                    document.getElementById("img_ban3").style.opacity = "1";
+                }, 1000);
+                bannerStatus = 3;
+            }
+
+            else if (bannerStatus === 3) {
+                document.getElementById("img_ban1").style.opacity = "0";
+
+                setTimeout(function() {
+                    document.getElementById("img_ban3").style.right = "0px";
+                    document.getElementById("img_ban3").style.zIndex = "1000";
+                    document.getElementById("img_ban1").style.right = "-1200px";
+                    document.getElementById("img_ban1").style.zIndex = "1500";
+                    document.getElementById("img_ban2").style.right = "1200px";
+                    document.getElementById("img_ban2").style.zIndex = "500";
+                }, 500);
+                
+                setTimeout(function() {
+                    document.getElementById("img_ban1").style.opacity = "1";
+                }, 1000);
+                bannerStatus = 1;
+            }
+        }
+    </script>
+
+    <div> <!-- lista de produtos -->
+        <ul class="carrossel_produtos_box" id="carrossel_produtos_box">
+            <li>
+                <img class="img_produtos" id="racao_seca_frango" src="./assets/recao_seca_frango.webp">
+                <h2><a href="./pagina_produto.html">Ração Seca XXX 1KG</a></h2>
+                <p>R$ XX,xx</p>
+            </li>
+            <li>
+                <img class="img_produtos" id="racao_seca_carne" src="./assets/raca_seca_carne.jpg">
+                <h2>Ração Seca XXX 1KG</h2>
+                <p>R$ XX,xx</p>
+            </li>
+            <li>
+                <img class="img_produtos" id="racao_umida_salmao" src="./assets/racao_umida_salmao.jpg">
+                <h2>Ração Seca XXX 1KG</h2>
+                <p>R$ XX,xx</p>
+            </li>
+            <li>
+                <img class="img_produtos" id="racao_umida_carne" src="./assets/racao_umida_carne.jpg">
+                <h2>Ração Seca XXX 1KG</h2>
+                <p>R$ XX,xx</p>
+            </li>
+            
+
+        </ul>
+    </div>
+
+    <div class="sobre_nos" id="sobre__nos">
+        <h2>Sobre Nós</h2>
+        <p>Lorem ipsum dolor sit amet. Ex cupiditate consequatur ab nemo optio est voluptatem impedit aut aspernatur possimus vel cupiditate enim ea magni facere est minus animi. Eos error natus qui fugiat suscipit a voluptas voluptates.</p>
+    </div>
+
+    <div class="container_servicos" id="container_servicos">
+        <h1>Nossos Serviços</h1>
+
+        <p>Contamos com uma equipe especialista para dar o melhor para o seu pet! Seleciona qual o serviço desejado e preencha os dados solicitados. Você será redirecionado para nossa equipe de atendimento para finalizar o agendamento!</p>
+
+        <ul class="nossos_servicos" id="nossos_servicos">
+            <li>
+                <img class="img_servicos" src="./assets/recao_seca_frango.webp">
+                <h2>Banho</h2>
+            </li>
+            <li>
+                <img class="img_servicos" src="./assets/recao_seca_frango.webp">
+                <h2>Tosa</h2>
+            </li>
+            <li>
+                <img class="img_servicos" src="./assets/recao_seca_frango.webp">
+                <h2>Banho e Tosa</h2>
+            </li>
+
+        </ul>
+    </div>
+
+    <form>
+        <fieldset class="container_formulario">
+            <label>Serviço</label>
+            <select name="Serviço" id="servico" class="input-padrao" required>
+                <option value="" data-default disabled selected></option>
+                <option value="Tosa">Tosa</option>
+                <option value="Banho">Banho</option>
+                <option value="Banho e Tosa">Banho e Tosa</option>
+            </select>
+
+            <label>Nome do Pet</label>
+            <input type="text" id="nome_do_pet" class="input-padrao" required>
+
+            <label>Porte do Pet</label>
+            <select name="porte do pet" id="porte_do_pet" class="input-padrao" required>
+                <option value="" data-default disabled selected></option>
+                <option value="Pequeno">Pequeno</option>
+                <option value="Médio">Médio</option>
+                <option value="Grande">Grande</option>
+            </select>
+
+            <label>Raça</label>
+            <input type="text" id="raca" class="input-padrao" required>
+
+            <label>Temperamento do Pet</label>
+            <select name="temperamento do pet" id="temperamento_do_pet" class="input-padrao" required>
+                <option value="" data-default disabled selected></option>
+                <option value="Calmo">Calmo</option>
+                <option value="Agitado">Agitado</option>
+                <option value="Agressivo">Agressivo</option>
+            </select>
+
+            <label>Data de Atendimento Desejada</label>
+            <input type="date" id="data_atendimento" class="input-padrao" required>
+
+            <label>Deseja o serviço de tele-busca?</label>
+            <select name="tele-busca" id="tele-busca" class="input-padrao" required>
+                <option value="" data-default disabled selected></option>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+
+            <input type="submit" value="Entre em Contato" class="enviar">
+        </fieldset>
+    </form>
+    
+    <footer>
+        <div class="container_footer">
+            <div class="footer_texto">
+                <p>Logo da empresa</p>
+                <p>Endereço: Rua XXXXXX, Porto Alegre</p>
+                <p>Telefone: (51)XXXX-XXXX</p>
+            </div>
+        </div>    
+    </footer>  
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop João Ribeiro</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/nav.css">
+    <link rel="stylesheet" href="./style_login/formulario_login.css">
+    <link rel="stylesheet" href="./style_login/bem_vindo.css">
+    <link rel="stylesheet" href="./style_login/redireciona_login_cadastro.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <ul class = "menu">
+                    <li class = "item_menu">
+                        <a href="./index.html">Home</a>
+                    </li>
+
+                    <li class = "item_menu">
+                        <a href="./index.html#carrossel_produtos_box">Rações</a>
+                    </li>
+
+                    <li class = "item_menu">
+                        <a href="./index.html#container_servicos">Serviços</a>
+                    </li>
+
+                    <li class = "item_menu">
+                        <a href="./index.html#sobre__nos">Sobre Nós</a>
+                    </li>
+
+                    <li class = "item_menu">
+                        <a href="./login.html">Entrar / Cadastre-se</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="texto_bem_vindo">
+        <h2>Bem vindo!</h2>
+        <p>Faça seu login com email e senha</p>
+    </div>
+
+
+    <form>
+        <fieldset class="container_formulario">
+
+            <label>Email</label>
+            <input type="email" id="email" class="input-padrao" placeholder="Digite seu email" required>
+
+            <label>Senha</label>
+            <input type="text" id="senha" class="input-padrao" pattern="[A-Za-z0-9]{8,}" placeholder="Senha" required>
+
+            <input type="submit" value="Continuar" class="enviar">
+        </fieldset>
+    </form>
+
+    <div class="redirecionamento_login_cadastro">
+        <p>Não tem uma conta? <a href="./cadastre-se.html">Cadastre-se</a></p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+.banner_principal {
+    margin: 0 auto;
+    width: 1200px;
+    height: 470px;
+    background-color: #F3f3f3;
+    overflow: hidden;
+    position: relative;
+}
+
+.img_ban{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    transition: all ease-in-out 500ms;
+    -webkit-transition: all ease-in-out 500ms;
+    -moz-transition: all ease-in-out 500ms;
+    -o-transition: all ease-in-out 500ms;
+}
+
+.banner_principal #img_ban3 {
+    background-image: url(../assets/banner3.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banner_principal #img_ban2 {
+    background-image: url(../assets/banner2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banner_principal #img_ban1 {
+    background-image: url(../assets/banner1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

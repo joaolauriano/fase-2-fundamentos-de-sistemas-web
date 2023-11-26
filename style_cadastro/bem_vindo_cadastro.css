@@ -1,0 +1,17 @@
+.texto_bem_vindo_cadastro h2{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: #000000;
+    padding-top: 4%;
+    padding-bottom: 1%;
+}
+
+.texto_bem_vindo_cadastro p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    color: #000000;
+    padding-bottom: 30px;
+}
